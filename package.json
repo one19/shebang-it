@@ -1,0 +1,54 @@
+{
+  "name": "shebang-it",
+  "version": "0.0.0",
+  "description": "shebang-it",
+  "keywords": [
+    "cli",
+    "util",
+    "node",
+    "shebang",
+    "compile",
+    "brightsole"
+  ],
+  "main": "index.js",
+  "repository": "git@github.com:one19/shebang-it.git",
+  "author": "Drew Showalter <maelstroswim@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "shebang-it": "bin/index.js"
+  },
+  "files": [
+    "bin/index.js",
+    "dist/index.js",
+    "dist/index.map"
+  ],
+  "scripts": {
+    "lint": "eslint --fix .",
+    "precommit": "npm run build && lint-staged",
+    "build": "parcel build -o dist/index.js -t node index.js && shebang-it",
+    "prepush": "ava",
+    "test": "ava",
+    "coverage": "nyc --reporter=html --reporter=text ava"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@brightsole/eslint-config-lint-node": "^0.0.2",
+    "ava": "^0.25.0",
+    "husky": "^0.14.2",
+    "lint-staged": "^7.2.2",
+    "mock-fs": "^4.6.0",
+    "nyc": "^12.0.2",
+    "parcel-bundler": "^1.8.1",
+    "shebang-it": "^0.0.0"
+  },
+  "dependencies": {
+    "commander": "^2.11.0",
+    "lodash": "4.17.10",
+    "signale": "^1.2.1"
+  }
+}
