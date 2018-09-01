@@ -1,6 +1,6 @@
 {
   "name": "shebang-it",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "shebang-it",
   "keywords": [
     "cli",
@@ -44,7 +44,7 @@
     "mock-fs": "^4.6.0",
     "nyc": "^12.0.2",
     "parcel-bundler": "^1.8.1",
-    "shebang-it": "^0.0.0"
+    "shebang-it": "^0.0.2"
   },
   "dependencies": {
     "commander": "^2.11.0",
