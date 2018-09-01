@@ -4,7 +4,23 @@ const program = require('commander');
 const _ = require('lodash');
 const { default: main } = require('./src');
 
-const runningLog = new Signale({ interactive: true, scope: 'shebang-it' });
+/** 
+ * A BIG DUMB FAKE STREAMLIKE OBJECT OF NOOPS. TO BE REMOVED ASAP
+ */
+const noop = () => {};
+const SAFETY_STREAM = {
+  write: noop,
+  cursorTo: noop,
+  clearLine: noop,
+  moveCursor: noop,
+};
+
+const runningLog = new Signale({
+  interactive: true,
+  scope: 'shebang-it',
+  stream: process.stdout || SAFETY_STREAM,
+});
+
 runningLog.start('Beginning process');
 
 global._ = _;

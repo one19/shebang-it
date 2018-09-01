@@ -42,6 +42,13 @@ As part of my build process with `husky` and `lint-staged`, I like generating th
 <summary>tl;dr: <strong>Mostly dev cleanup</strong></summary>
 <br />
 
+`THE ISSUE`
+**0.** PATCH OUR DEFAULT BACK OUT WHEN THE ISSUE IS RESOLVED
+[signale issue](https://github.com/klauscfhq/signale/issues/55)
+[np issue](https://github.com/sindresorhus/np/issues/136)
+[ava issue](https://github.com/avajs/ava/issues/1322)
+> It seems like execa (another sindresorhus package) hijacks the output stream. This meant that any cli package using `shebang-it` would explode when trying to use `np` to update itself. That's super annoying. It seems like a lower priority thing, so in the meantime, I've added a small bit of code to default the stdio stream if it's not present to a nooplike **thing**. I'm unhappy with this, and want it gone ASAP.
+
 1. add it to project-status
 2. generate a couple badges
 3. add it to travis-ci
