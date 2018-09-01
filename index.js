@@ -18,7 +18,7 @@ const SAFETY_STREAM = {
 const runningLog = new Signale({
   interactive: true,
   scope: 'shebang-it',
-  stream: process.stdout || SAFETY_STREAM,
+  stream: process.stdout.moveCursor ? process.stdout : SAFETY_STREAM,
 });
 
 runningLog.start('Beginning process');
