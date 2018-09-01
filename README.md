@@ -56,6 +56,7 @@ As part of my build process with `husky` and `lint-staged`, I like generating th
 5. report test percentage
 6. report code quality
 7. add option for silent execution
+8. add a ricky-martin themed svg logo
 
 </details>
 <br/>
