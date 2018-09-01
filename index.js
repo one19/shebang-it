@@ -4,7 +4,7 @@ const program = require('commander');
 const _ = require('lodash');
 const { default: main } = require('./src');
 
-/** 
+/**
  * A BIG DUMB FAKE STREAMLIKE OBJECT OF NOOPS. TO BE REMOVED ASAP
  */
 const noop = () => {};
