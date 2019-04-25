@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const { Signale } = require('signale');
 const program = require('commander');
 const _ = require('lodash');
